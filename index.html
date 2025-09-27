@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/4b843a4710.js" crossorigin="anonymous"></script>
+  <title>Digitalna razmjena</title>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <nav>
+  <p>
+  <i class="fa-solid fa-handshake fa-beat" style="color: #ff8000; margin-right: 10px;"></i>
+  Digitalna razmjena
+</p>
+
+
+    <ul>
+      <li><a href="#ponuda">O meni</a></li>
+      <li><a href="#praksa">Moja vizija</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <button class="button">Dogovorimo suradnju</button>
+  </nav>
+
+
+  <div class="grid-razmjena">
+    <div class="kutija" id="ponuda">
+      <h2>Što nudim</h2>
+      <p>✔ Automatizaciju procesa u knjigovodstvu<br>✔ Organizaciju i automatizaciju e-pošte<br>✔ Izrada jednostavnih web stranica</p>
+    </div>
+
+    <div class="kutija" id="praksa">
+      <h2>Što tražim</h2>
+      <p>✔ Online praksa<br>✔ Uvid u procese<br>✔ Suradnja s mentorom</p>
+    </div>
+
+    <div class="kutija">
+      <h2>Demo prikaz</h2>
+      <ul>
+        <a href="#">Gmail + Sheets + Brevo</a><br>
+        <a href="#">Google Forms + Make</a><br>
+        <a href="#">HTML/CSS stranica</a><br>
+        <a href="#">Trello board</a>
+      </ul>
+    </div>
+
+    <div class="kutija">
+      <h3>Prezentacije</h3>
+      <ul>
+        <a href="#">Automatizacija (PDF)</a><br>
+        <a href="#">Demo stranica</a><br>
+         <a href="#">Trello prikaz</a><br>
+        <a href="#">Video prezentacija</a>
+      </ul>
+    </div>
+  </div>
+
+  <blockquote class="citat">
+    "Tehnologija je korisna kad služi ljudima."
+  </blockquote>
+
+  <section id="kontakt" class="kutija kontakt">
+    <h2>Dogovorimo suradnju</h2>
+    <p>Tražim praksu, nudim tehničku podršku.<br>Zajedno možemo olakšati knjigovodstvene procese.</p>
+    <p><strong>Email:</strong> bisof@bisofzs.com<br><strong>Telefon:</strong> +385 976761954</p>
+    <button class="button">Pošalji poruku</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sanja Bišof<br>Automatizacija za knjigovodstvene servise</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const kutije = document.querySelectorAll(".kutija");
+      kutije.forEach((el, i) => {
+        el.style.opacity = 0;
+        el.style.transform = "translateY(30px)";
+        setTimeout(() => {
+          el.style.transition = "all 0.8s ease";
+          el.style.opacity = 1;
+          el.style.transform = "translateY(0)";
+        }, i * 200);
+      });
+    });
+  </script>
+</body>
+</html>
